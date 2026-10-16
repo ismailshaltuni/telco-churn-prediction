@@ -60,7 +60,7 @@ telco-churn-prediction/
 ### Option 2 — Local machine
 
 ```bash
-git clone https://github.com/<your-username>/telco-churn-prediction.git
+git clone https://github.com/ismailshaltuni/telco-churn-prediction.git
 cd telco-churn-prediction
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
