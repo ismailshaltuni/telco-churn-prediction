@@ -1,0 +1,281 @@
+{
+  "n_customers": 7043,
+  "churn_rate": 0.2653698707936959,
+  "n_test": 1409,
+  "test_churners": 374,
+  "cv": {
+    "ACCURACY": {
+      "Logistic Regression": "0.750 +/- 0.013",
+      "Random Forest": "0.756 +/- 0.012",
+      "Gradient Boosting": "0.800 +/- 0.011"
+    },
+    "PRECISION": {
+      "Logistic Regression": "0.519 +/- 0.017",
+      "Random Forest": "0.528 +/- 0.016",
+      "Gradient Boosting": "0.658 +/- 0.027"
+    },
+    "RECALL": {
+      "Logistic Regression": "0.794 +/- 0.039",
+      "Random Forest": "0.791 +/- 0.026",
+      "Gradient Boosting": "0.511 +/- 0.029"
+    },
+    "F1": {
+      "Logistic Regression": "0.627 +/- 0.023",
+      "Random Forest": "0.633 +/- 0.015",
+      "Gradient Boosting": "0.575 +/- 0.025"
+    },
+    "ROC_AUC": {
+      "Logistic Regression": "0.845 +/- 0.012",
+      "Random Forest": "0.846 +/- 0.009",
+      "Gradient Boosting": "0.846 +/- 0.009"
+    }
+  },
+  "test_at_0.5": {
+    "Accuracy": {
+      "Logistic Regression": 0.74,
+      "Random Forest": 0.749,
+      "Gradient Boosting": 0.795
+    },
+    "Precision": {
+      "Logistic Regression": 0.506,
+      "Random Forest": 0.519,
+      "Gradient Boosting": 0.647
+    },
+    "Recall": {
+      "Logistic Regression": 0.775,
+      "Random Forest": 0.781,
+      "Gradient Boosting": 0.5
+    },
+    "F1": {
+      "Logistic Regression": 0.612,
+      "Random Forest": 0.623,
+      "Gradient Boosting": 0.564
+    },
+    "ROC-AUC": {
+      "Logistic Regression": 0.841,
+      "Random Forest": 0.839,
+      "Gradient Boosting": 0.838
+    },
+    "Brier": {
+      "Logistic Regression": 0.167,
+      "Random Forest": 0.164,
+      "Gradient Boosting": 0.139
+    }
+  },
+  "test_tuned": {
+    "Threshold": {
+      "Logistic Regression": 0.58,
+      "Random Forest": 0.55,
+      "Gradient Boosting": 0.31
+    },
+    "Accuracy": {
+      "Logistic Regression": 0.767,
+      "Random Forest": 0.764,
+      "Gradient Boosting": 0.76
+    },
+    "Precision": {
+      "Logistic Regression": 0.546,
+      "Random Forest": 0.541,
+      "Gradient Boosting": 0.535
+    },
+    "Recall": {
+      "Logistic Regression": 0.727,
+      "Random Forest": 0.73,
+      "Gradient Boosting": 0.743
+    },
+    "F1": {
+      "Logistic Regression": 0.624,
+      "Random Forest": 0.621,
+      "Gradient Boosting": 0.622
+    },
+    "ROC-AUC": {
+      "Logistic Regression": 0.841,
+      "Random Forest": 0.839,
+      "Gradient Boosting": 0.838
+    }
+  },
+  "thresholds": {
+    "Logistic Regression": 0.5800000000000004,
+    "Random Forest": 0.5500000000000004,
+    "Gradient Boosting": 0.31000000000000016
+  },
+  "best_model": "Gradient Boosting",
+  "best_threshold": 0.31000000000000016,
+  "permutation_importance_top": {
+    "tenure": 0.0655,
+    "Contract": 0.0642,
+    "AvgMonthlySpend": 0.0113,
+    "MonthlyCharges": 0.0083,
+    "InternetService": 0.0078,
+    "OnlineSecurity": 0.0061,
+    "TechSupport": 0.0046,
+    "PaymentMethod": 0.0035,
+    "PaperlessBilling": 0.0028,
+    "NumAddOnServices": 0.0025
+  },
+  "policies": {
+    "Customers contacted": {
+      "A. Expected-value rule (EV > 0)": 748,
+      "B. Flag everyone above tuned threshold (0.31)": 520,
+      "C. Flag everyone above 0.5": 289,
+      "D. Contact every customer": 1409,
+      "E. Random selection (same budget as A)": 740
+    },
+    "Churners reached": {
+      "A. Expected-value rule (EV > 0)": 323,
+      "B. Flag everyone above tuned threshold (0.31)": 278,
+      "C. Flag everyone above 0.5": 187,
+      "D. Contact every customer": 374,
+      "E. Random selection (same budget as A)": 193
+    },
+    "Share of all churners reached": {
+      "A. Expected-value rule (EV > 0)": 0.86,
+      "B. Flag everyone above tuned threshold (0.31)": 0.74,
+      "C. Flag everyone above 0.5": 0.5,
+      "D. Contact every customer": 1.0,
+      "E. Random selection (same budget as A)": 0.52
+    },
+    "Campaign cost ($)": {
+      "A. Expected-value rule (EV > 0)": 22440.0,
+      "B. Flag everyone above tuned threshold (0.31)": 15600.0,
+      "C. Flag everyone above 0.5": 8670.0,
+      "D. Contact every customer": 42270.0,
+      "E. Random selection (same budget as A)": 22200.0
+    },
+    "Expected revenue saved ($)": {
+      "A. Expected-value rule (EV > 0)": 89833.32,
+      "B. Flag everyone above tuned threshold (0.31)": 74701.44,
+      "C. Flag everyone above 0.5": 51847.38,
+      "D. Contact every customer": 97973.64,
+      "E. Random selection (same budget as A)": 49937.4
+    },
+    "Net benefit ($)": {
+      "A. Expected-value rule (EV > 0)": 67393.32,
+      "B. Flag everyone above tuned threshold (0.31)": 59101.44,
+      "C. Flag everyone above 0.5": 43177.38,
+      "D. Contact every customer": 55703.64,
+      "E. Random selection (same budget as A)": 27737.4
+    }
+  },
+  "top500_churners": 261,
+  "fairness": [
+    {
+      "Attribute": "gender",
+      "Group": "Female",
+      "Customers": 687,
+      "Actual churn rate": 0.281,
+      "Flag rate": 0.364,
+      "Recall": 0.71,
+      "Precision": 0.548
+    },
+    {
+      "Attribute": "gender",
+      "Group": "Male",
+      "Customers": 722,
+      "Actual churn rate": 0.251,
+      "Flag rate": 0.374,
+      "Recall": 0.779,
+      "Precision": 0.522
+    },
+    {
+      "Attribute": "SeniorCitizen",
+      "Group": "No",
+      "Customers": 1187,
+      "Actual churn rate": 0.233,
+      "Flag rate": 0.319,
+      "Recall": 0.696,
+      "Precision": 0.507
+    },
+    {
+      "Attribute": "SeniorCitizen",
+      "Group": "Yes",
+      "Customers": 222,
+      "Actual churn rate": 0.441,
+      "Flag rate": 0.635,
+      "Recall": 0.878,
+      "Precision": 0.61
+    },
+    {
+      "Attribute": "Partner",
+      "Group": "No",
+      "Customers": 736,
+      "Actual churn rate": 0.337,
+      "Flag rate": 0.485,
+      "Recall": 0.798,
+      "Precision": 0.555
+    },
+    {
+      "Attribute": "Partner",
+      "Group": "Yes",
+      "Customers": 673,
+      "Actual churn rate": 0.187,
+      "Flag rate": 0.242,
+      "Recall": 0.635,
+      "Precision": 0.491
+    },
+    {
+      "Attribute": "Dependents",
+      "Group": "No",
+      "Customers": 978,
+      "Actual churn rate": 0.31,
+      "Flag rate": 0.451,
+      "Recall": 0.789,
+      "Precision": 0.542
+    },
+    {
+      "Attribute": "Dependents",
+      "Group": "Yes",
+      "Customers": 431,
+      "Actual churn rate": 0.165,
+      "Flag rate": 0.183,
+      "Recall": 0.549,
+      "Precision": 0.494
+    }
+  ],
+  "contract_within_tenure": {
+    "Month-to-month": {
+      "0-12 months": 0.514,
+      "13-24 months": 0.377,
+      "25-48 months": 0.329,
+      "49-72 months": 0.26
+    },
+    "One year": {
+      "0-12 months": 0.105,
+      "13-24 months": 0.081,
+      "25-48 months": 0.106,
+      "49-72 months": 0.129
+    },
+    "Two year": {
+      "0-12 months": 0.0,
+      "13-24 months": 0.0,
+      "25-48 months": 0.022,
+      "49-72 months": 0.033
+    }
+  },
+  "tiers": {
+    "customers": {
+      "1 - Save now": 167,
+      "2 - Nudge": 264,
+      "3 - Monitor (low value)": 33,
+      "4 - Leave alone": 945
+    },
+    "actual_churn_rate": {
+      "1 - Save now": 0.68,
+      "2 - Nudge": 0.5,
+      "3 - Monitor (low value)": 0.42,
+      "4 - Leave alone": 0.12
+    },
+    "avg_monthly_bill": {
+      "1 - Save now": 86.2,
+      "2 - Nudge": 74.58,
+      "3 - Monitor (low value)": 23.55,
+      "4 - Leave alone": 58.67
+    },
+    "avg_expected_value": {
+      "1 - Save now": 202.92,
+      "2 - Nudge": 101.21,
+      "3 - Monitor (low value)": 10.85,
+      "4 - Leave alone": -3.71
+    }
+  }
+}
